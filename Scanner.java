@@ -144,8 +144,9 @@ class Scanner {
 
             while (isDigit(peek())) advance();
 
-            addToken(TokenType.NUMBER, Double.parseDouble(source.substring(start, current)));
         }
+        
+        addToken(TokenType.NUMBER, Double.parseDouble(source.substring(start, current)));
     }
 
     public void string() {
